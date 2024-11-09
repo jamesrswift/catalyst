@@ -1,1 +1,3 @@
-Hello World
+#import "/src/lib.typ" as catalyst
+
+#catalyst.dtd
