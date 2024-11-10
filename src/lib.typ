@@ -1,1 +1,1 @@
-#import "dtd.typ"
+#import "cdxml.typ"
