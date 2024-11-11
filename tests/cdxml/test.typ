@@ -1,48 +1,6 @@
 #import "/src/lib.typ" as catalyst
 #import "@preview/cetz:0.3.1"
 
-
-
-#let render-n(n) = {
-  cetz.draw.anchor(n.id, n.p.split(" ").map(float))
-}
-
-#let render-b(b) = {
-  if b.Order == "2" {
-    cetz.draw.line(
-      b.B, b.E, stroke: (cap: "round")
-    )
-    cetz.draw.line(
-      ((a: b.B, b: b.E, angle: -45deg, number: 2.5)), 
-      ((a: b.E, b: b.B, angle: 45deg, number: 2.5)), 
-      stroke: (cap: "round")
-    )
-  } else {
-    cetz.draw.line(
-      b.B, b.E, stroke: (cap: "round")
-    )
-  }
-}
-
-#let render-fragment(fragment) = {
-  for el in fragment.children {
-    if el.at("") == "n" { render-n(el) }
-    if el.at("") == "b" { render-b(el) }
-  }
-}
-
-#let render-page(page) = {
-  for fragment in page.children.filter((el)=>el.at("")=="fragment") {
-    render-fragment(fragment)
-  }
-}
-
-#let render-cdxml(cdxml) = {
-  for page in cdxml.children.filter((el)=>el.at("")=="page") {
-    render-page(page)
-  }
-}
-
 #let cdxml = catalyst.cdxml.parse(xml("pinene.cdxml")).first()
 
 #let show-without-none(dict) = {
@@ -62,5 +20,5 @@
 
 #figure(
   caption: [],
-  cetz.canvas(length: 1.5pt, padding: 3, {render-cdxml(cdxml)})
+  cetz.canvas(length: 1.5pt, padding: 3, {catalyst.core.render.render(cdxml)})
 )
