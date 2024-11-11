@@ -1,11 +1,11 @@
-#import "/src/lib.typ" as catalyst
-#import "/src/imports.typ": cetz
+#import "/tests/preamble.typ": *
+#show: default-show
 
 #let cdxml = catalyst.cdxml.parse(xml("tlc.cdxml")).first()
 
 #cetz.canvas(
   
   {
-    catalyst.core.render.default(cdxml)
+    catalyst.core.render.render(cdxml)
   }
 )

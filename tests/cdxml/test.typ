@@ -1,5 +1,5 @@
-#import "/src/lib.typ" as catalyst
-#import "@preview/cetz:0.3.1"
+#import "/tests/preamble.typ": *
+#show: default-show
 
 #let cdxml = catalyst.cdxml.parse(xml("pinene.cdxml")).first()
 
@@ -18,7 +18,5 @@
 
 // #show-without-none(cdxml.children.at(2))
 
-#figure(
-  caption: [],
-  cetz.canvas(length: 1.5pt, padding: 3, {catalyst.core.render.render(cdxml)})
-)
+
+#cetz.canvas(length: 1.5pt, padding: 3, {catalyst.core.render.render(cdxml)})

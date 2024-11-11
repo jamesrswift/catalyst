@@ -1,5 +1,5 @@
-#import "/src/lib.typ" as catalyst
-#import "/src/imports.typ": cetz
+#import "/tests/preamble.typ": *
+#show: default-show
 
 #let cdxml = catalyst.core.schema.parse(
   xml("test-reaction.cdxml")
