@@ -13,8 +13,8 @@
       b.B, b.E, stroke: (cap: "round")
     )
     cetz.draw.line(
-      ((a: b.B, b: b.E, angle: -45deg, number: 2.25)), 
-      ((a: b.E, b: b.B, angle: 45deg, number: 2.25)), 
+      ((a: b.B, b: b.E, angle: -45deg, number: 2.5)), 
+      ((a: b.E, b: b.B, angle: 45deg, number: 2.5)), 
       stroke: (cap: "round")
     )
   } else {
@@ -60,4 +60,7 @@
 
 // #show-without-none(cdxml.children.at(2))
 
-#cetz.canvas(length: 1.5pt, {render-cdxml(cdxml)})
+#figure(
+  caption: [],
+  cetz.canvas(length: 1.5pt, padding: 3, {render-cdxml(cdxml)})
+)

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE CDXML SYSTEM "http://www.cambridgesoft.com/xml/cdxml.dtd">
+<CDXML CreationProgram="ChemDraw 18.2.0.48" Name="test-reaction.cdxml" BoundingBox="94.39 138.98 186.30 160.69" WindowPosition="0 0" WindowSize="0 1073741824" WindowIsZoomed="yes" FractionalWidths="yes" InterpretChemically="yes" ShowAtomQuery="yes" ShowAtomStereo="no" ShowAtomEnhancedStereo="yes" ShowAtomNumber="no" ShowResidueID="no" ShowBondQuery="yes" ShowBondRxn="yes" ShowBondStereo="no" ShowTerminalCarbonLabels="no" ShowNonTerminalCarbonLabels="no" HideImplicitHydrogens="no" Magnification="166" LabelFont="3" LabelSize="7" LabelFace="96" CaptionFont="3" CaptionSize="7" HashSpacing="1.75" MarginWidth="1.25" LineWidth="0.45" BoldWidth="1.60" BondLength="12.20" BondSpacing="20" ChainAngle="120" LabelJustification="Auto" CaptionJustification="Left" AminoAcidTermini="HOH" ShowSequenceTermini="yes" ShowSequenceBonds="yes" ShowSequenceUnlinkedBranches="no" ResidueWrapCount="40" ResidueBlockCount="10" ResidueZigZag="yes" NumberResidueBlocks="no" PrintMargins="28.35 28.35 28.35 28.35" MacPrintInfo="0003000002D002D0000000001FE7164EFF9EFF8C208016CC0367057B03E00002000002D002D0000000001FE7164E000100000064000000010001010100020001270F000100010000000000000000000000000002001901900000000000600000000000000000000100000000000000000000000000000000" ChemPropName="" ChemPropFormula="Chemical Formula: " ChemPropExactMass="Exact Mass: " ChemPropMolWt="Molecular Weight: " ChemPropMOverZ="m/z: " ChemPropAnalysis="Elemental Analysis: " ChemPropBoilingPt="Boiling Point: " ChemPropMeltingPt="Melting Point: " ChemPropCritTemp="Critical Temp: " ChemPropCritPres="Critical Pres: " ChemPropCritVol="Critical Vol: " ChemPropGibbs="Gibbs Energy: " ChemPropLogP="Log P: " ChemPropMR="MR: " ChemPropHenry="Henry&apos;s Law: " ChemPropEForm="Heat of Form: " ChemProptPSA="tPSA: " ChemPropLogS="LogS: " ChemPropPKa="pKa: " ChemPropID="" ChemPropFragmentLabel="" color="0" bgcolor="1" RxnAutonumberStart="1" RxnAutonumberConditions="no" RxnAutonumberStyle="Roman" RxnAutonumberFormat="(#)">
+    <colortable>
+        <color r="1" g="1" b="1"/>
+        <color r="0" g="0" b="0"/>
+        <color r="1" g="0" b="0"/>
+        <color r="1" g="1" b="0"/>
+        <color r="0" g="1" b="0"/>
+        <color r="0" g="1" b="1"/>
+        <color r="0" g="0" b="1"/>
+        <color r="1" g="0" b="1"/>
+    </colortable>
+    <fonttable>
+        <font id="3" charset="iso-8859-1" name="Arial"/>
+    </fonttable>
+    <page id="34" BoundingBox="0 0 538.51 785.11" HeaderPosition="36" FooterPosition="36" PrintTrimMarks="yes" HeightPages="1" WidthPages="1">
+        <group id="32" BoundingBox="94.39 138.98 186.30 160.69" Z="18">
+            <fragment id="16" BoundingBox="94.39 138.98 115.75 160.69" Z="2">
+                <n id="15" p="94.50 160.50" Z="1" AS="N" />
+                <n id="17" p="105.07 154.40" Z="3" AS="N" />
+                <n id="19" p="115.63 160.50" Z="5" AS="N" />
+                <n id="21" p="105.07 142.20" Z="7" Element="8" NumHydrogens="1" NeedsClean="yes" AS="N">
+                    <t p="102.34 144.93" BoundingBox="102.34 138.98 112.85 145.03" LabelJustification="Left" LabelAlignment="Left">
+                        <s font="3" size="7" color="0" face="96">OH</s>
+                    </t>
+                </n>
+                <b id="18" Z="4" B="15" E="17" BS="N" />
+                <b id="20" Z="6" B="17" E="19" BS="N" />
+                <b id="22" Z="8" B="17" E="21" BS="N" />
+            </fragment>
+            <fragment id="24" BoundingBox="164.94 138.98 186.30 160.69" Z="10">
+                <n id="23" p="165.05 160.50" Z="9" AS="N" />
+                <n id="25" p="175.62 154.40" Z="11" AS="N" />
+                <n id="27" p="186.18 160.50" Z="13" AS="N" />
+                <n id="29" p="175.62 142.20" Z="15" Element="8" NumHydrogens="0" NeedsClean="yes" AS="N">
+                    <t p="172.89 144.93" BoundingBox="172.89 138.98 178.34 145.03" LabelJustification="Left">
+                        <s font="3" size="7" color="0" face="96">O</s>
+                    </t>
+                </n>
+                <b id="26" Z="12" B="23" E="25" BS="N" />
+                <b id="28" Z="14" B="25" E="27" BS="N" />
+                <b id="30" Z="16" B="25" E="29" Order="2" BS="N" />
+            </fragment>
+            <graphic id="31" SupersededBy="35" BoundingBox="152.64 149.84 128.04 149.84" Z="17" GraphicType="Line" ArrowType="FullHead" HeadSize="2250" />
+            <arrow id="35" BoundingBox="128.04 147.16 152.64 152.38" Z="17" FillType="None" ArrowheadHead="Full" ArrowheadType="Solid" HeadSize="2250" ArrowheadCenterSize="1969" ArrowheadWidth="563" Head3D="152.64 149.84 0" Tail3D="128.04 149.84 0" Center3D="212.99 225.59 0" MajorAxisEnd3D="237.59 225.59 0" MinorAxisEnd3D="212.99 250.18 0" />
+        </group>
+    </page>
+</CDXML>

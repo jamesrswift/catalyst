@@ -200,7 +200,31 @@
     }
   )
 
-  // TODO: Group element
+  element("group",
+    children: {
+      child("t")
+      child("fragment")
+      child("group")
+      child("graphic")
+      child("altgroup")
+      child("curve")
+      child("step")
+      child("scheme")
+      child("spectrum")
+      child("arrow")
+      child("bioshape")
+      child("plasmidmap")
+      child("objecttag")
+      child("annotation")
+      child("rlogic")
+    },
+    attributes: {
+      attribute("BoundingBox", CDATA, IMPLIED)
+      attribute("id", CDATA, IMPLIED)
+      attribute("Integral", ("yes", "no"), "no")
+      attribute("Z", CDATA, IMPLIED)
+    }
+  )
 
   element("fragment",
     children: {
