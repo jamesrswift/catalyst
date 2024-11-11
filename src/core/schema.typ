@@ -5,6 +5,13 @@
   element.CDXML
   element.colortable
   element.color
+  element.fonttable
+  element.font
+  element.page
+  element.group
+  element.fragment
+  element.n
+  element.b
 }
 
 #let decltype(type) = (: "": type)

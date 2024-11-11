@@ -105,13 +105,18 @@
 #let RxnAutonumberStyle           = define-implied-cdata("RxnAutonumberStyle")
 #let ShowResidueID    = define("ShowResidueID", ("yes", "no"), "no")
 
+#let id = define("id", CDATA, REQUIRED)
+#let Z = define("Z", CDATA, IMPLIED)
 
 #let parse(input, attr-def) = {
   // TO DO: Better error or warning?
   if attr-def.decl == REQUIRED and input == none {panic()}
-  if std.type(type) == array {
-    if input not in type {return (attr-def.transform)(attr-def.decl)} else {(attr-def.transform)(input)}
-  } else {
-    if attr-def.transform != none {return (attr-def.transform)(input)}
-  }
+  
+  if std.type(attr-def.type) == array {
+    if input not in attr-def.type {input = (attr-def.decl)}
+  } 
+
+  if attr-def.transform != none {return (attr-def.transform)(input)}
+  else {input}
+
 }
