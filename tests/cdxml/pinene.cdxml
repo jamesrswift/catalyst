@@ -1,216 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE CDXML SYSTEM "http://www.cambridgesoft.com/xml/cdxml.dtd" >
-<CDXML
- CreationProgram="ChemDraw 18.2.0.48"
- Name="apinene.cdxml"
- BoundingBox="226.74 318.23 260.29 359.40"
- WindowPosition="0 0"
- WindowSize="0 1073741824"
- WindowIsZoomed="yes"
- FractionalWidths="yes"
- InterpretChemically="yes"
- ShowAtomQuery="yes"
- ShowAtomStereo="no"
- ShowAtomEnhancedStereo="yes"
- ShowAtomNumber="no"
- ShowResidueID="no"
- ShowBondQuery="yes"
- ShowBondRxn="yes"
- ShowBondStereo="no"
- ShowTerminalCarbonLabels="no"
- ShowNonTerminalCarbonLabels="no"
- HideImplicitHydrogens="no"
- Magnification="166"
- LabelFont="3"
- LabelSize="7"
- LabelFace="96"
- CaptionFont="3"
- CaptionSize="7"
- HashSpacing="1.75"
- MarginWidth="1.25"
- LineWidth="0.45"
- BoldWidth="1.60"
- BondLength="12.20"
- BondSpacing="20"
- ChainAngle="120"
- LabelJustification="Auto"
- CaptionJustification="Left"
- AminoAcidTermini="HOH"
- ShowSequenceTermini="yes"
- ShowSequenceBonds="yes"
- ShowSequenceUnlinkedBranches="no"
- ResidueWrapCount="40"
- ResidueBlockCount="10"
- ResidueZigZag="yes"
- NumberResidueBlocks="no"
- PrintMargins="28.35 28.35 28.35 28.35"
- MacPrintInfo="0003000002D002D0000000001FE7164EFF9EFF8C208016CC0367057B03E00002000002D002D0000000001FE7164E000100000064000000010001010100020001270F000100010000000000000000000000000002001901900000000000600000000000000000000100000000000000000000000000000000"
- ChemPropName=""
- ChemPropFormula="Chemical Formula: "
- ChemPropExactMass="Exact Mass: "
- ChemPropMolWt="Molecular Weight: "
- ChemPropMOverZ="m/z: "
- ChemPropAnalysis="Elemental Analysis: "
- ChemPropBoilingPt="Boiling Point: "
- ChemPropMeltingPt="Melting Point: "
- ChemPropCritTemp="Critical Temp: "
- ChemPropCritPres="Critical Pres: "
- ChemPropCritVol="Critical Vol: "
- ChemPropGibbs="Gibbs Energy: "
- ChemPropLogP="Log P: "
- ChemPropMR="MR: "
- ChemPropHenry="Henry&apos;s Law: "
- ChemPropEForm="Heat of Form: "
- ChemProptPSA="tPSA: "
- ChemPropLogS="LogS: "
- ChemPropPKa="pKa: "
- ChemPropID=""
- ChemPropFragmentLabel=""
- color="0"
- bgcolor="1"
- RxnAutonumberStart="1"
- RxnAutonumberConditions="no"
- RxnAutonumberStyle="Roman"
- RxnAutonumberFormat="(#)"
-><colortable>
-<color r="1" g="1" b="1"/>
-<color r="0" g="0" b="0"/>
-<color r="1" g="0" b="0"/>
-<color r="1" g="1" b="0"/>
-<color r="0" g="1" b="0"/>
-<color r="0" g="1" b="1"/>
-<color r="0" g="0" b="1"/>
-<color r="1" g="0" b="1"/>
-</colortable><fonttable>
-<font id="3" charset="iso-8859-1" name="Arial"/>
-</fonttable><page
- id="871"
- BoundingBox="0 0 538.51 785.11"
- HeaderPosition="36"
- FooterPosition="36"
- PrintTrimMarks="yes"
- HeightPages="1"
- WidthPages="1"
-><fragment
- id="813"
- BoundingBox="226.74 318.23 260.29 359.40"
- Z="25"
-><n
- id="810"
- p="238.94 336.53"
- Z="23"
- AS="N"
-/><n
- id="812"
- p="238.94 348.72"
- Z="24"
- AS="N"
-/><n
- id="814"
- p="249.50 354.82"
- Z="26"
- AS="N"
-/><n
- id="816"
- p="260.06 348.72"
- Z="27"
- AS="N"
-/><n
- id="818"
- p="260.06 336.53"
- Z="28"
- AS="N"
-/><n
- id="820"
- p="249.50 330.43"
- Z="29"
- AS="N"
-/><n
- id="828"
- p="249.50 318.23"
- Z="36"
- AS="N"
-/><n
- id="832"
- p="249.49 342.62"
- Z="38"
- AS="N"
-/><n
- id="862"
- p="226.74 348.72"
- Z="41"
- AS="N"
-/><n
- id="866"
- p="232.84 359.29"
- Z="43"
- AS="N"
-/><b
- id="822"
- Z="30"
- B="810"
- E="812"
- BS="N"
-/><b
- id="823"
- Z="31"
- B="812"
- E="814"
- BS="N"
-/><b
- id="824"
- Z="32"
- B="814"
- E="816"
- BS="N"
-/><b
- id="825"
- Z="33"
- B="816"
- E="818"
- BS="N"
-/><b
- id="826"
- Z="34"
- B="818"
- E="820"
- Order="2"
- BS="N"
- BondCircularOrdering="825 0 829 827"
-/><b
- id="827"
- Z="35"
- B="820"
- E="810"
- BS="N"
-/><b
- id="829"
- Z="37"
- B="820"
- E="828"
- BS="N"
-/><b
- id="846"
- Z="39"
- B="832"
- E="814"
- BS="N"
-/><b
- id="850"
- Z="40"
- B="810"
- E="832"
- BS="N"
-/><b
- id="863"
- Z="42"
- B="812"
- E="862"
- BS="N"
-/><b
- id="867"
- Z="44"
- B="812"
- E="866"
- BS="N"
-/></fragment></page></CDXML>
+<!DOCTYPE CDXML SYSTEM "http://www.cambridgesoft.com/xml/cdxml.dtd">
+<CDXML CreationProgram="ChemDraw 18.2.0.48" Name="apinene.cdxml" BoundingBox="226.74 318.23 260.29 359.40" WindowPosition="0 0" WindowSize="0 1073741824" WindowIsZoomed="yes" FractionalWidths="yes" InterpretChemically="yes" ShowAtomQuery="yes" ShowAtomStereo="no" ShowAtomEnhancedStereo="yes" ShowAtomNumber="no" ShowResidueID="no" ShowBondQuery="yes" ShowBondRxn="yes" ShowBondStereo="no" ShowTerminalCarbonLabels="no" ShowNonTerminalCarbonLabels="no" HideImplicitHydrogens="no" Magnification="166" LabelFont="3" LabelSize="7" LabelFace="96" CaptionFont="3" CaptionSize="7" HashSpacing="1.75" MarginWidth="1.25" LineWidth="0.45" BoldWidth="1.60" BondLength="12.20" BondSpacing="20" ChainAngle="120" LabelJustification="Auto" CaptionJustification="Left" AminoAcidTermini="HOH" ShowSequenceTermini="yes" ShowSequenceBonds="yes" ShowSequenceUnlinkedBranches="no" ResidueWrapCount="40" ResidueBlockCount="10" ResidueZigZag="yes" NumberResidueBlocks="no" PrintMargins="28.35 28.35 28.35 28.35" MacPrintInfo="0003000002D002D0000000001FE7164EFF9EFF8C208016CC0367057B03E00002000002D002D0000000001FE7164E000100000064000000010001010100020001270F000100010000000000000000000000000002001901900000000000600000000000000000000100000000000000000000000000000000" ChemPropName="" ChemPropFormula="Chemical Formula: " ChemPropExactMass="Exact Mass: " ChemPropMolWt="Molecular Weight: " ChemPropMOverZ="m/z: " ChemPropAnalysis="Elemental Analysis: " ChemPropBoilingPt="Boiling Point: " ChemPropMeltingPt="Melting Point: " ChemPropCritTemp="Critical Temp: " ChemPropCritPres="Critical Pres: " ChemPropCritVol="Critical Vol: " ChemPropGibbs="Gibbs Energy: " ChemPropLogP="Log P: " ChemPropMR="MR: " ChemPropHenry="Henry&apos;s Law: " ChemPropEForm="Heat of Form: " ChemProptPSA="tPSA: " ChemPropLogS="LogS: " ChemPropPKa="pKa: " ChemPropID="" ChemPropFragmentLabel="" color="0" bgcolor="1" RxnAutonumberStart="1" RxnAutonumberConditions="no" RxnAutonumberStyle="Roman" RxnAutonumberFormat="(#)">
+    <colortable>
+        <color r="1" g="1" b="1"/>
+        <color r="0" g="0" b="0"/>
+        <color r="1" g="0" b="0"/>
+        <color r="1" g="1" b="0"/>
+        <color r="0" g="1" b="0"/>
+        <color r="0" g="1" b="1"/>
+        <color r="0" g="0" b="1"/>
+        <color r="1" g="0" b="1"/>
+    </colortable>
+    <fonttable>
+        <font id="3" charset="iso-8859-1" name="Arial"/>
+    </fonttable>
+    <page id="871" BoundingBox="0 0 538.51 785.11" HeaderPosition="36" FooterPosition="36" PrintTrimMarks="yes" HeightPages="1" WidthPages="1">
+        <fragment id="813" BoundingBox="226.74 318.23 260.29 359.40" Z="25">
+            <n id="810" p="238.94 336.53" Z="23" AS="N" />
+            <n id="812" p="238.94 348.72" Z="24" AS="N" />
+            <n id="814" p="249.50 354.82" Z="26" AS="N" />
+            <n id="816" p="260.06 348.72" Z="27" AS="N" />
+            <n id="818" p="260.06 336.53" Z="28" AS="N" />
+            <n id="820" p="249.50 330.43" Z="29" AS="N" />
+            <n id="828" p="249.50 318.23" Z="36" AS="N" />
+            <n id="832" p="249.49 342.62" Z="38" AS="N" />
+            <n id="862" p="226.74 348.72" Z="41" AS="N" />
+            <n id="866" p="232.84 359.29" Z="43" AS="N" />
+            <b id="822" Z="30" B="810" E="812" BS="N" />
+            <b id="823" Z="31" B="812" E="814" BS="N" />
+            <b id="824" Z="32" B="814" E="816" BS="N" />
+            <b id="825" Z="33" B="816" E="818" BS="N" />
+            <b id="826" Z="34" B="818" E="820" Order="2" BS="N" BondCircularOrdering="825 0 829 827" />
+            <b id="827" Z="35" B="820" E="810" BS="N" />
+            <b id="829" Z="37" B="820" E="828" BS="N" />
+            <b id="846" Z="39" B="832" E="814" BS="N" />
+            <b id="850" Z="40" B="810" E="832" BS="N" />
+            <b id="863" Z="42" B="812" E="862" BS="N" />
+            <b id="867" Z="44" B="812" E="866" BS="N" />
+        </fragment>
+    </page>
+</CDXML>

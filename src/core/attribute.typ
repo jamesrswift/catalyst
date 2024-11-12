@@ -15,6 +15,11 @@
   define(name, CDATA, IMPLIED, transform: transform)
 }
 
+#let CDXString(name) = define-implied-cdata(name)
+#let CDXPoint2D(name) = define-implied-cdata(name, transform: (s)=>{s.split(" ").map(float)})
+#let CDXPoint3D(name) = CDXPoint2D(name)
+#let CDXRectangle(name) = define-implied-cdata(name, transform: (s)=>{s.split(" ").map(float).chunks(2)})
+
 #let alpha            = define-implied-cdata("alpha")
 #let AminoAcidTermini = define("AminoAcidTermini", ("HOH", "NH2COOH"), "HOH")
 #let bgalpha          = define-implied-cdata("bgalpha")
@@ -23,7 +28,7 @@
 #let BondLength       = define-implied-cdata("BondLength")
 #let BondSpacing      = define-implied-cdata("BondSpacing")
 #let BondSpacingAbs   = define-implied-cdata("BondSpacingAbs")
-#let BoundingBox      = define-implied-cdata("BoundingBox")
+#let BoundingBox      = CDXRectangle("BoundingBox")
 #let CaptionColor     = define-implied-cdata("CaptionColor")
 #let CaptionFace      = define-implied-cdata("CaptionFace")
 #let CaptionFont      = define-implied-cdata("CaptionFont")
@@ -105,18 +110,42 @@
 #let RxnAutonumberStyle           = define-implied-cdata("RxnAutonumberStyle")
 #let ShowResidueID    = define("ShowResidueID", ("yes", "no"), "no")
 
-#let id = define("id", CDATA, REQUIRED)
+#let id = define("id", CDATA, IMPLIED)
 #let Z = define("Z", CDATA, IMPLIED)
 
+#let IgnoreWarnings = define("IgnoreWarnings", ("yes", "no"), "no")
+#let Justification = define("Justification", ("Auto", "Left", "Center", "Right", "Full", "Above", "Below", "Best"), "Auto")
+#let LabelAlignment = define("LabelAlignment", ("Auto", "Left", "Center", "Right", "Above", "Below", "Best"), "Auto")
+
+#let LineStarts = define-implied-cdata("LineStarts")
+#let LineHeight = define-implied-cdata("LineHeight")
+
+#let p = CDXPoint2D("p",)
+#let RotationAngle = define-implied-cdata("RotationAngle")
+#let SupersededBy = define-implied-cdata("SupersededBy")
+
+#let visible = define("visible", ("yes", "no"), "yes")
+
+#let Warning = define-implied-cdata("warning")
+
+#let WordWrapWidth = define-implied-cdata("WordWrapWidth")
+
+#let face = define-implied-cdata("face")
+#let font = define-implied-cdata("font")
+#let size = define-implied-cdata("size")
+
 #let parse(input, attr-def) = {
-  // TO DO: Better error or warning?
-  if attr-def.decl == REQUIRED and input == none {panic()}
   
+  // TO DO: Better error or warning?
+  if attr-def.decl == REQUIRED and input == none {panic(input, attr-def)}
+
   if std.type(attr-def.type) == array {
     if input not in attr-def.type {input = (attr-def.decl)}
   } 
 
-  if attr-def.transform != none {return (attr-def.transform)(input)}
+  if attr-def.transform != none {
+    return (attr-def.transform)(input)
+  }
   else {input}
 
 }

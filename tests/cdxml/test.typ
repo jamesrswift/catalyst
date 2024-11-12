@@ -1,7 +1,7 @@
 #import "/tests/preamble.typ": *
 #show: default-show
 
-#let cdxml = catalyst.cdxml.parse(xml("pinene.cdxml")).first()
+#let cdxml = catalyst.core.schema.parse(xml("pinene.cdxml")).first()
 
 #let show-without-none(dict) = {
   for (key, value) in dict.pairs() {
@@ -9,14 +9,14 @@
     if type(value) == dict {
       (: (key): show-without-none(value))
     } else if type(value) == array {
-      (: (key): value.map(show-without-none))
+      (: (key): value)
     } else {
       ((key): value)
     }
   }
 }
 
-// #show-without-none(cdxml.children.at(2))
+// #show-without-none(cdxml)
 
 
 #cetz.canvas(length: 1.5pt, padding: 3, {catalyst.core.render.render(cdxml)})

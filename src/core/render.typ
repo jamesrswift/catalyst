@@ -52,8 +52,10 @@
 
     contextualize-attributes(("catalyst", element.at("")), attrs)
 
+    if "p" in attrs {cetz.draw.move-to(attrs.p)}
+
     for child in children {
-      render(child)
+      if type(child) == dictionary {render(child)}
     }
 
     if element.at("") in handlers {

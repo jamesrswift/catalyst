@@ -10,6 +10,8 @@
   element.page
   element.group
   element.fragment
+  element.t
+  element.s
   element.n
   element.b
 }
@@ -20,7 +22,8 @@
   if type(xml) == array {
     xml.map((entry)=>{
       if type(entry) == str {
-
+        if allowed-children == str {return entry}
+        return
       } else if entry.tag in definition { 
         decltype(entry.tag)
         for (attr, attr-def) in definition.at(entry.tag).attributes {

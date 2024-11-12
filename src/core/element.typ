@@ -19,6 +19,8 @@
   optional: optional,
 ),)
 
+#let children(tags, many: true, optional: true) = tags.map(tag=>child(tag, many: many, optional: optional))
+
 #let CDXML = element("CDXML",
     children: {
       child("colortable", many: false)
@@ -244,6 +246,52 @@
   }
 )
 
+#let t = element("t",
+  children: children(("s", "objecttag", "annotation")),
+  attributes: {
+    attribute.alpha
+    attribute.BoundingBox
+    attribute.CaptionColor
+    attribute.CaptionFace
+    attribute.CaptionFont
+    attribute.CaptionJustification
+    attribute.CaptionLineHeight
+    attribute.CaptionSize
+    attribute.color
+    attribute.id
+    attribute.IgnoreWarnings
+    attribute.InterpretChemically
+    attribute.Justification
+    attribute.LabelAlignment
+    attribute.LabelColor
+    attribute.LabelFace
+    attribute.LabelFont
+    attribute.LabelJustification
+    attribute.LabelLineHeight
+    attribute.LabelSize
+    attribute.LineStarts
+    attribute.LineHeight
+    attribute.p
+    attribute.RotationAngle
+    attribute.SupersededBy
+    attribute.visible
+    attribute.Warning
+    attribute.WordWrapWidth
+    attribute.Z
+  }
+)
+
+#let s = element("s",
+  children: str,
+  attributes: {
+    attribute.alpha
+    attribute.color
+    attribute.face
+    attribute.font
+    attribute.size
+  }
+)
+
 #let n = element("n", 
     children: {
       child("objecttag")
@@ -292,7 +340,7 @@
       attribute.define("NeedsClean", ("yes", "no"), "no")
       attribute.define("NumHydrogens", CDATA, IMPLIED)
       attribute.define("NodeType", CDATA, IMPLIED)
-      attribute.define("p", CDATA, IMPLIED)
+      attribute.p
       attribute.define("Radical", CDATA, IMPLIED)
       attribute.define("RingBondCount", CDATA, IMPLIED)
       attribute.define("RxnChange", ("yes", "no"), "no")

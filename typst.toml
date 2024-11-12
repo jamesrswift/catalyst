@@ -6,13 +6,12 @@ version = "0.1.0"
 entrypoint = "src/lib.typ"
 authors = ["James R Swift"]
 license = "Unlicense"
-description = ""
-homepage = ""
-repository = ""
-keywords = []
+description = "Render CDXML ChemDraw files natively in Typst"
+repository = "https://www.github.com/jamesrswift/catalyst"
+keywords = ["ChemDraw", "CDXML", "Molecule"]
 categories = []
 disciplines = []
-compiler = ""
+compiler = "0.12"
 exclude = [
 	".github",
 	"docs",

@@ -6,5 +6,6 @@
     width: auto,
     height: auto,
   )
+  // set text(font: "Arial")
   body
 }
