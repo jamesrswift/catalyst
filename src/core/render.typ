@@ -54,12 +54,12 @@
 
     if "p" in attrs {cetz.draw.move-to(attrs.p)}
 
-    for child in children {
-      if type(child) == dictionary {render(child)}
+    if element.at("") in handlers {
+      cetz.draw.scope((handlers.at(element.at("")))(element))
     }
 
-    if element.at("") in handlers {
-      (handlers.at(element.at("")))(element)
+    for child in children {
+      if type(child) == dictionary {render(child)}
     }
 
   })

@@ -6,38 +6,32 @@
 #let group(element) = {}
 #let fragment(element) = {}
 
-#let n(element) = cetz.draw.get-ctx((ctx)=>{
-  
-  if element.Element != none{
-    cetz.draw.circle(
-      name: element.id, 
-      (),
-      radius: 4,
-      stroke: none
-    )
-  } else {
-    cetz.draw.anchor(element.id, ())
+#let n(element) = {
+  cetz.draw.anchor(element.id, ())
+}
+
+
+#let t(element) = {
+  if element.BoundingBox != none {
+    cetz.draw.rect(..element.BoundingBox, fill: white, stroke: none)
   }
+  // cetz.draw.rect(..element.BoundingBox, stroke: 1pt)
+}
+
+#let s(element) = cetz.draw.get-ctx(ctx=>{
+  cetz.draw.content((), element.children.first(), anchor: {
+    if ctx.catalyst.t.LabelJustification == "Right" {
+      "south-east"
+    } else {
+      "south-west"
+    }
+  })
 })
 
-#let t(element) = {}
-#let s(element) = {
-  cetz.draw.content((), element.children.first(), anchor: "north-west")
-}
-
 #let b(element) = {
-    if element.Order == "2" {
+  cetz.draw.on-layer(-1, (ctx)=>{
     cetz.draw.line(
       element.B, element.E, stroke: (cap: "round")
     )
-    // cetz.draw.line(
-    //   ((a: element.B, b: element.E, angle: -45deg, number: 2.5)), 
-    //   ((a: element.E, b: element.B, angle: 45deg, number: 2.5)), 
-    //   stroke: (cap: "round")
-    // )
-  } else {
-    cetz.draw.line(
-      element.B, element.E, stroke: (cap: "round")
-    )
-  }
-}
+  })
+} 

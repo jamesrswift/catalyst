@@ -16,9 +16,18 @@
 }
 
 #let CDXString(name) = define-implied-cdata(name)
-#let CDXPoint2D(name) = define-implied-cdata(name, transform: (s)=>{s.split(" ").map(float)})
+#let CDXPoint2D(name) = define-implied-cdata(name, transform: (s)=>{
+  let splits = s.split(" ").map(float)
+  splits.at(1) *= -1
+  return splits
+})
 #let CDXPoint3D(name) = CDXPoint2D(name)
-#let CDXRectangle(name) = define-implied-cdata(name, transform: (s)=>{s.split(" ").map(float).chunks(2)})
+#let CDXRectangle(name) = define-implied-cdata(name, 
+  transform: (s)=>{
+    if s == none {return (none)}
+    s.split(" ").map(float).chunks(2).map(((x,y))=>(x,-y))
+  }
+)
 
 #let alpha            = define-implied-cdata("alpha")
 #let AminoAcidTermini = define("AminoAcidTermini", ("HOH", "NH2COOH"), "HOH")
