@@ -1,19 +1,26 @@
 #import "element.typ"
 #import "attribute.typ" as attribute: parse, parse
 
+#import "/src/elements/bond.typ"
+#import "/src/elements/CDXML.typ"
+#import "/src/elements/fragment.typ"
+#import "/src/elements/group.typ"
+#import "/src/elements/node.typ"
+#import "/src/elements/page.typ"
+
 #let definition = {
-  element.CDXML
+  CDXML.element
   element.colortable
   element.color
   element.fonttable
   element.font
-  element.page
-  element.group
-  element.fragment
+  page.element
+  group.element
+  fragment.element
   element.t
   element.s
-  element.n
-  element.b
+  node.element
+  bond.element
 }
 
 #let decltype(type) = (: "": type)

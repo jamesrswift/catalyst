@@ -6,7 +6,8 @@
     width: auto,
     height: auto,
   )
-  // set text(font: "Arial")
+  set text(font: "Arial")
+  set figure(gap: 2.5em)
   body
 }
 

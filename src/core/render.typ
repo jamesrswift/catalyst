@@ -46,21 +46,39 @@
     message: "Expected dictionary, got " + type(element)
   )
 
-  cetz.draw.scope({
+  cetz.draw.scope( {
 
     let (..attrs, children) = element
 
     contextualize-attributes(("catalyst", element.at("")), attrs)
 
-    if "p" in attrs {cetz.draw.move-to(attrs.p)}
+    let content-scope = {
 
-    if element.at("") in handlers {
-      cetz.draw.scope((handlers.at(element.at("")))(element))
+      if element.at("") in handlers {
+        cetz.draw.scope((handlers.at(element.at("")))(element))
+      }
+
+      for child in children {
+        if type(child) == dictionary {render(child)}
+      }
+
+      if "p" in attrs {cetz.draw.move-to(attrs.p)}
+      cetz.draw.anchor("default", ())
+
     }
 
-    for child in children {
-      if type(child) == dictionary {render(child)}
+    if "p" in attrs {cetz.draw.move-to(attrs.p)}
+
+    if "id" in attrs and attrs.id != none {
+      cetz.draw.group(name: attrs.id, content-scope)
+      cetz.draw.copy-anchors(attrs.id)
+    } else {
+      content-scope
     }
 
   })
+
+  // if "id" in element {
+  //   cetz.draw.copy-anchors(element.id)
+  // }
 }
